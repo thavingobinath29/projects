@@ -1,0 +1,170 @@
+/* Global Styling */
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+background:#f4f6f9;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+
+/* Form Styling */
+
+form{
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+form input,form select{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+form button{
+grid-column: span 2;
+padding:10px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+form button:hover{
+background:#0056b3;
+}
+
+
+/* Search Box */
+
+input[type="text"]{
+padding:10px;
+margin-bottom:15px;
+border-radius:5px;
+border:1px solid #ccc;
+width:98.5%;
+}
+
+
+/* Table Styling */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+table th{
+background:#007bff;
+color:white;
+padding:12px;
+text-align:left;
+}
+
+table td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+background:#f1f1f1;
+}
+
+
+/* Buttons */
+
+button{
+padding:6px 10px;
+margin-right:5px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+button:nth-child(1){
+background:#195eb9;
+color:white;
+}
+
+button:nth-child(2){
+background:#dc3545;
+color:white;
+}
+
+
+/* Responsive Table */
+
+@media (max-width:768px){
+
+table thead{
+display:none;
+}
+
+table, table tbody, table tr, table td{
+display:block;
+width:100%;
+}
+
+table tr{
+margin-bottom:15px;
+background:white;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+padding:10px;
+}
+
+table td{
+text-align:right;
+padding-left:50%;
+position:relative;
+}
+
+table td::before{
+content: attr(data-label);
+position:absolute;
+left:10px;
+width:45%;
+padding-right:10px;
+text-align:left;
+font-weight:bold;
+}
+
+}
+
+
+/* Mobile Form */
+
+@media (max-width:600px){
+
+form{
+grid-template-columns:1fr;
+}
+
+form button{
+grid-column: span 1;
+}
+
+}
